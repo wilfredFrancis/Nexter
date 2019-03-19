@@ -1,0 +1,53 @@
+.features{
+
+	margin: 15rem 0;
+	grid-column: center / center-end;
+ 
+
+ @supports(display: grid) {
+	display: grid;
+	// grid-template-columns: repeat(3, 1fr);
+	//inorder to change the No.of columns auto
+	grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+	grid-gap: 6rem;
+	// grid-template-rows: auto auto;
+	align-items: start;
+
+  }
+
+}
+
+.feature{
+
+	 width: 33.3333%;
+     float: left;
+     margin-bottom: 6rem;
+	
+
+	@supports(display: grid){
+
+		width: auto;
+		margin-bottom: 0;
+	}
+
+	    display: grid;
+		grid-template-columns: min-content 1fr;
+		grid-row-gap: 1.5rem;
+		grid-column-gap: 2.5rem;
+
+
+	&__icon{
+
+		fill: $color-primary;
+		width: 4.5rem;
+		height: 4.5rem;
+		display: grid;
+
+		grid-row: 1 / sapn 2;
+	}
+	
+	&__text{
+
+		font-size: 1.7rem;
+	}
+}
